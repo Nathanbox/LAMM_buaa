@@ -321,7 +321,13 @@ int main(int argc, char **argv) {
                 /// transform to first odom frame
                 gtsam::Pose3 between_pose = gtsam::Pose3(pose_vec[keyInd].matrix()).between(
                         gtsam::Pose3(pose_vec[cloudInd].matrix()));
-                Eigen::Vector3d trans_betw = between_pose.translation().vector();
+
+                // oioichange
+                // Eigen::Vector3d trans_betw = between_pose.translation().vector();
+                Eigen::Vector3d trans_betw = between_pose.translation();
+
+
+
                 Eigen::Matrix3d rot_betw = between_pose.rotation().matrix();
                 frame_file << "count: " << count << std::endl;
                 frame_file << "cloudInd: " << cloudInd << " keyInd: " << keyInd << std::endl;

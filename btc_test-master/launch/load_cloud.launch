@@ -16,8 +16,14 @@
     <param name="calc_gt_enable" type="bool" value="false"/>
     <param name="data_name" type="string" value="1"/>
     <param name="setting_path" type="string" value="$(find btc_loop)/config/config_multi_mapping.yaml"/>
-    <param name="root_dir" type="string" value="/home/Downloads/test_data/"/>
-    <param name="load_dir" type="string" value="/home/Downloads/test_data/"/>
+
+    <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data_ori/"/>
+    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data_ori/"/> -->
+
+
+    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data/"/>
+    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data/"/>
+
     <param name="loop_gt_file" type="string" value="/home/weihairuo/bag/pose_correct/1.txt"/>
 
     <group if="$(arg rviz)">
