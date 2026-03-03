@@ -14,8 +14,8 @@ voxel_init_num: 10
 proj_plane_num: 3
 proj_image_resolution: 0.5
 proj_image_high_inc: 0.1
-proj_dis_min: 0.2
-proj_dis_max: 5
+proj_dis_min: 0.3             #0.2
+proj_dis_max: 23              #5
 summary_min_thre: 6
 line_filter_enable: 1
 touch_filter_enable: 0
@@ -31,7 +31,7 @@ triangle_resolution: 0.2
 skip_near_num: 20
 candidate_num: 50
 sub_frame_num: 10
-icp_threshold: 0.15
+icp_threshold: 0.3              #0.15
 similarity_threshold: 0.65
 rough_dis_threshold: 0.01
 #0.2 0.5
@@ -43,6 +43,15 @@ is_kitti: 1
 
 # extrinsic
 T_lidar_to_vehicle: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: d
+  data: [1,0,0,0,
+        0,1,0,0,
+        0,0,1,0,
+        0,0,0,1]
+        
+T_lidar_to_camera: !!opencv-matrix
   rows: 4
   cols: 4
   dt: d

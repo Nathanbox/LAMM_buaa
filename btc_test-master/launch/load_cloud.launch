@@ -12,7 +12,7 @@
     <param name="icp_threshold" value="$(arg arg1)"/>
     <param name="is_rgb" type="bool" value="false"/>
     <param name="is_body" type="bool" value="false"/>
-    <param name="data_num" type="int" value="3"/>
+    <param name="data_num" type="int" value="2"/>
     <param name="calc_gt_enable" type="bool" value="false"/>
     <param name="data_name" type="string" value="1"/>
     <param name="setting_path" type="string" value="$(find btc_loop)/config/config_multi_mapping.yaml"/>
@@ -21,8 +21,11 @@
     <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data_ori/"/> -->
 
 
-    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data/"/>
-    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data/"/>
+    <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/>
+    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/> -->
+
+    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/tem/"/>
+    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/tem/"/>
 
     <param name="loop_gt_file" type="string" value="/home/weihairuo/bag/pose_correct/1.txt"/>
 
