@@ -710,23 +710,18 @@ int main(int argc, char **argv) {
         std::cout << "correct file:" << correct_pose_file << std::endl;
         std::ofstream correct_file(correct_pose_file);
 
+        // 此处时间改为秒，*1e-9为默认ns
         for (size_t i = pose_id_inc_list[data_id];
              i < pose_id_inc_list[data_id + 1]; i++) {
             gtsam::Pose3 pose = results.at(i).cast<gtsam::Pose3>();
             Eigen::Quaterniond correct_q(pose.rotation().matrix());
-            // time_vec may contain timestamps in seconds or in nanoseconds.
-            // If values are large (e.g. >1e10) assume nanoseconds and convert to seconds.
-            double time_out = time_vec[i];
-            if (time_out > 1e10) {
-                time_out *= 1e-9; // ns -> s
-            }
-            correct_file << std::fixed << std::setprecision(6) << time_out
+            correct_file << std::fixed << std::setprecision(6) << time_vec[i]           //* 1e-9
                          << std::setprecision(7) << " " << pose.translation()[0]
                          << " " << pose.translation()[1] << " "
                          << pose.translation()[2] << " " << correct_q.x() << " "
                          << correct_q.y() << " " << correct_q.z() << " "
                          << correct_q.w() << std::endl;
-            truth_file << std::fixed << std::setprecision(6) << time_out
+            truth_file << std::fixed << std::setprecision(6) << time_vec[i]             //* 1e-9
                        << std::setprecision(7) << " " << pose.translation()[0]
                        << " " << pose.translation()[1] << " "
                        << pose.translation()[2] << " " << correct_q.x() << " "

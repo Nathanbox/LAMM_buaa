@@ -24,8 +24,8 @@
     <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/>
     <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/> -->
 
-    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/tem/"/>
-    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/tem/"/>
+    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8_same/"/>
+    <param name="load_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8_same/"/>
 
     <param name="loop_gt_file" type="string" value="/home/weihairuo/bag/pose_correct/1.txt"/>
 

@@ -25,7 +25,8 @@
 
     <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/main_old_2/"/> -->
     <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/test_data/"/> -->
-    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/>
+    <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8_same/"/>
+    <!-- <param name="root_dir" type="string" value="/home/zhang-zifei/data/LAMM/fastlivo_cut_2.8/"/> -->
 
     <group if="$(arg rviz)">
         <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz"
